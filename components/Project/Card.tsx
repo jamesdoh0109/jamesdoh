@@ -1,22 +1,29 @@
-import ImageContainer from "../common/ImageContainer";
+import Link from "next/link";
+import ImageContainer from "@/components/common/ImageContainer";
 
 type ProjectCard = {
+  id: string;
   name: string;
   description: string;
   date: string;
-  imagePath: string;
+  imageLink: string;
 };
 
 export default function Card({
+  id,
   name,
   description,
   date,
-  imagePath,
+  imageLink,
 }: ProjectCard) {
   return (
-    <div className="items-center p-5 bg-white text-black h-[420px] laptop:w-[350px] w-[320px] space-y-3 rounded-3xl shadow-xl cursor-pointer transition hover:opacity-50">
+    <Link
+      href={`/projects/?modal=true&id=${id}`}
+      className="items-center p-5 bg-white text-black cursor-pointer h-[420px] laptop:w-[350px] w-[320px] space-y-3 rounded-3xl shadow-xl transition hover:opacity-50"
+      scroll={false}
+    >
       <ImageContainer
-        src={imagePath}
+        src={imageLink}
         alt="name"
         className="h-1/2 flex justify-center"
       />
@@ -25,8 +32,8 @@ export default function Card({
           <h3 className="text-lg font-medium">{name}</h3>
           <span className="text-grey-2 text-xs italic">{date}</span>
         </div>
-        <p className="text-sm">{description}</p>
+        <p className="text-sm line-clamp-6">{description}</p>
       </div>
-    </div>
+    </Link>
   );
 }

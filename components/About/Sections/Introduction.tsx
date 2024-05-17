@@ -1,4 +1,4 @@
-import Link from "@/components/common/Link";
+import Anchor from "@/components/common/Anchor";
 
 export default function Introduction() {
   return (
@@ -9,7 +9,7 @@ export default function Introduction() {
       <div className="space-y-2">
         <p>
           I&apos;m James Doh, and I&apos;m a rising junior at the&nbsp;
-          <Link
+          <Anchor
             href="https://www.upenn.edu"
             text="University of Pennsylvania"
           />
@@ -21,7 +21,7 @@ export default function Introduction() {
           take a leave of absence from school, and completed the mandatory
           military service in South Korea. 🇰🇷 🪖 Before returning back to Penn
           this fall, I&apos;m interning at&nbsp;
-          <Link href="https://www.soundable.health" text="Soundable Health" />
+          <Anchor href="https://www.soundable.health" text="Soundable Health" />
           &nbsp;at its Seoul office, helping build some cool products that
           analyze everyday physiological sounds using AI and provide patients
           with effective health-monitoring solutions.
@@ -29,24 +29,24 @@ export default function Introduction() {
         <div>
           <p>
             Some of my favorite projects &#40;more found @&nbsp;
-            <Link href="/projects" text="/projects" />
+            <Anchor href="/projects" text="/projects" />
             &#41;:
           </p>
           <ul className="list-disc pl-8">
             <li>
-              <Link
+              <Anchor
                 href="https://penn-free-food-exchange.vercel.app"
                 text="Penn Free Food Exchange"
               />
             </li>
             <li>
-              <Link
+              <Anchor
                 href="https://www.string-search-visualizer.com"
                 text="String search algorithm visualizer"
               />
             </li>
             <li>
-              <Link href="https://trial.proudp.com" text="proudP web trial" />
+              <Anchor href="https://trial.proudp.com" text="proudP web trial" />
             </li>
           </ul>
         </div>
@@ -58,21 +58,21 @@ export default function Introduction() {
           <ul className="list-disc pl-8">
             <li>
               Teaching Assistant @&nbsp;
-              <Link
+              <Anchor
                 href="https://www.cis.upenn.edu/~cis110/current"
                 text="CIS-1100"
               />
             </li>
             <li>
               Teaching Assistant @&nbsp;
-              <Link
+              <Anchor
                 href="https://www.cis.upenn.edu/~cis1210/current/index.html"
                 text="CIS-1210"
               />
             </li>
             <li>
               Programming TA @&nbsp;
-              <Link
+              <Anchor
                 href="https://pennfirstplus.upenn.edu/pre-freshman-program"
                 text="Pre-Freshman Program"
               />
@@ -82,7 +82,7 @@ export default function Introduction() {
         <p>
           When I&apos;m not in front of my computer, you can probably find me
           listening to music 🎧 &#40;
-          <Link
+          <Anchor
             href="https://www.youtube.com/watch?v=pTg3gFYqjBY"
             text="mostly rap + r&b"
           />

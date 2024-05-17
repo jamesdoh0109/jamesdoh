@@ -1,11 +1,10 @@
-import Link from "@/components/common/Link";
 import ImageContainer from "@/components/common/ImageContainer";
 import Github from "@/components/svg/Github";
 import LinkedIn from "@/components/svg/LinkedIn";
 import Mail from "@/components/svg/Mail";
 import X from "@/components/svg/X";
-import profile2 from "@/public/profile_2.png";
 import SectionContainer from "@/components/About/SectionContainer";
+import profile2 from "@/public/profile_2.png";
 
 export default function About() {
   return (

@@ -25,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${roboto.className} bg-grey-3 dark:bg-grey-0`}>
+        <div id="modal"></div>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="h-dvh">
             <Navbar />

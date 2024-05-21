@@ -10,7 +10,8 @@ export type User = {
 
 export type Project = {
   name: string;
-  date: string;
+  startDate: string;
+  endDate: string;
   description: string;
   imageLink: string;
   projectLink: string;
@@ -22,7 +23,8 @@ export type Projects = {
 };
 
 export type ProjectForm = {
-  date: string;
+  startDate: string;
+  endDate: string;
   name: string;
   image: string;
   projectLink: string;

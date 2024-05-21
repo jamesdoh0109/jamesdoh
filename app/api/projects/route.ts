@@ -25,19 +25,21 @@ export async function GET(_req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  const { name, date, description, projectLink, image } = await req.json();
+  //const { name, date, description, projectLink, image } = await req.json();
 
   const uuid = uid();
 
-  const imageLink = "";
+  const imageLink =
+    "https://firebasestorage.googleapis.com/v0/b/personal-web-68801.appspot.com/o/string-search-visualizer.png?alt=media&token=7a4e3260-a5f0-45bb-a859-5b5c26d12cb4";
 
   try {
     const projectsRef = ref(database, `projects/${uuid}`);
     set(projectsRef, {
-      name,
-      date,
-      description,
-      projectLink,
+      name: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+      projectLink: "",
       imageLink,
     });
 

@@ -2,6 +2,7 @@ import Card from "@/components/Admin/Card";
 import Button from "@/components/common/Button";
 import { getProjects } from "@/lib/db";
 import { Project } from "@/lib/types";
+import { formatDateRange } from "@/lib/utils";
 
 export default async function Projects() {
   const projects: Record<string, Project> = await getProjects();
@@ -18,7 +19,7 @@ export default async function Projects() {
               key={projectId}
               href={`/admin/projects/edit/${projectId}`}
               name={project.name}
-              date={project.date}
+              date={formatDateRange(project.startDate, project.endDate)}
               description={project.description}
             />
           ))}

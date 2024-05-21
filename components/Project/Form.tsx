@@ -29,8 +29,13 @@ export default function Form({ project }: FormProps) {
       >
         <input {...register("name")} />
         {clientError.name && <p role="alert">{clientError.name.message}</p>}
-        <input {...register("date")} />
-        {clientError.date && <p role="alert">{clientError.date.message}</p>}
+        <input {...register("startDate")} />
+        {clientError.startDate && (
+          <p role="alert">{clientError.startDate.message}</p>
+        )}
+        {clientError.endDate && (
+          <p role="alert">{clientError.endDate.message}</p>
+        )}
         <input {...register("description")} />
         {clientError.description && (
           <p role="alert">{clientError.description.message}</p>

@@ -32,7 +32,7 @@ export default function Details({
           {isValidHttpUrl(githubLink) ? (
             <Anchor href={githubLink} text="Link to repository" color="blue" />
           ) : (
-            <span>Link unavailable-{githubLink}</span>
+            <span>Link unavailable - {githubLink}</span>
           )}
         </div>
         <div className="flex items-center space-x-2">
@@ -40,7 +40,7 @@ export default function Details({
           {isValidHttpUrl(projectLink) ? (
             <Anchor href={projectLink} text="Link to project" color="blue" />
           ) : (
-            <span>Link unavailable-{projectLink}</span>
+            <span>Link unavailable - {projectLink}</span>
           )}
         </div>
       </div>

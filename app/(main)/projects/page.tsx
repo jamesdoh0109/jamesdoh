@@ -1,5 +1,6 @@
 import { getProjects } from "@/lib/db";
 import { Project } from "@/lib/types";
+import { formatDateRange } from "@/lib/utils";
 import Card from "@/components/Project/Card";
 import Modal from "@/components/common/Modal";
 import Details from "@/components/Project/Details";
@@ -13,7 +14,7 @@ const renderProjectCard = (project: Project, id: string) => (
     key={id}
     id={id}
     name={project.name}
-    date={project.date}
+    date={formatDateRange(project.startDate, project.endDate)}
     description={project.description}
     imageLink={project.imageLink}
   />
@@ -22,7 +23,7 @@ const renderProjectCard = (project: Project, id: string) => (
 const renderProjectDetails = (project: Project) => (
   <Details
     name={project.name}
-    date={project.date}
+    date={formatDateRange(project.startDate, project.endDate)}
     description={project.description}
     imageLink={project.imageLink}
     projectLink={project.projectLink}

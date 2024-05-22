@@ -1,3 +1,5 @@
+import { Project } from "@/lib/types";
+
 export function isValidHttpUrl(str: string) {
   let url;
 
@@ -41,4 +43,20 @@ export function formatDateRange(startDate: string, endDate: string) {
   } else {
     return `${formattedStartDate} - ${formattedEndDate}`;
   }
+}
+
+function convertEndDateStringToTime(endDate: string) {
+  const month = parseInt(endDate.slice(0, 2), 10);
+  const year = parseInt(endDate.slice(2), 10);
+  return new Date(year, month - 1);
+}
+
+export function sortByEndDate(
+  [, projectA]: [string, Project],
+  [, projectB]: [string, Project]
+): number {
+  return (
+    convertEndDateStringToTime(projectB.endDate).getTime() -
+    convertEndDateStringToTime(projectA.endDate).getTime()
+  );
 }

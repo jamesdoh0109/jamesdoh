@@ -1,27 +1,20 @@
-import Link from "next/link";
 import ImageContainer from "@/components/common/ImageContainer";
 
-type ProjectCard = {
-  id: string;
+type SummaryCardProps = {
   name: string;
   description: string;
   date: string;
   imageLink: string;
 };
 
-export default function Card({
-  id,
+export default function SummaryCard({
   name,
   description,
   date,
   imageLink,
-}: ProjectCard) {
+}: SummaryCardProps) {
   return (
-    <Link
-      href={`/projects/?modal=true&id=${id}`}
-      className="items-center p-5 bg-white text-black cursor-pointer h-[420px] laptop:w-[350px] w-[320px] space-y-3 rounded-3xl shadow-xl transition hover:opacity-50"
-      scroll={false}
-    >
+    <>
       <ImageContainer
         src={imageLink}
         alt="name"
@@ -34,6 +27,6 @@ export default function Card({
         </div>
         <p className="text-sm line-clamp-6">{description}</p>
       </div>
-    </Link>
+    </>
   );
 }

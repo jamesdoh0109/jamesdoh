@@ -45,17 +45,18 @@ export function formatDateRange(startDate: string, endDate: string) {
   }
 }
 
-function convertEndDateStringToTime(endDate: string) {
-  const [year, month] = endDate.split("-").map((part) => parseInt(part, 10));
-  return new Date(year, month - 1);
-}
-
 export function sortByEndDate(
-  [, projectA]: [string, Project],
-  [, projectB]: [string, Project]
-): number {
-  return (
-    convertEndDateStringToTime(projectB.endDate).getTime() -
-    convertEndDateStringToTime(projectA.endDate).getTime()
-  );
+  projects: Record<string, Project>
+): Record<string, Project> {
+  const projectEntries = Object.entries(projects);
+
+  projectEntries.sort(([, a], [, b]) => {
+    const dateA = new Date(a.endDate).getTime();
+    const dateB = new Date(b.endDate).getTime();
+    return dateB - dateA;
+  });
+
+  const sortedProjects = Object.fromEntries(projectEntries);
+
+  return sortedProjects;
 }

@@ -1,18 +1,18 @@
 import ImageContainer from "@/components/common/ImageContainer";
 
-type SummaryCardProps = {
+type SummaryProps = {
   name: string;
   description: string;
   date: string;
   imageLink: string;
 };
 
-export default function SummaryCard({
+export default function Summary({
   name,
   description,
   date,
   imageLink,
-}: SummaryCardProps) {
+}: SummaryProps) {
   return (
     <>
       <ImageContainer

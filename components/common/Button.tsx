@@ -36,6 +36,7 @@ export default function Button({
     return (
       <button
         className={`${COLORS[color]} px-5 py-2 text-center rounded-lg cursor-pointer transition hover:opacity-70`}
+        onClick={onClick}
       >
         {text}
       </button>

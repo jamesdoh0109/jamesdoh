@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import { useModal } from "@/context/ModalProvider";
 import Button from "@/components/common/Button";
 
 type ModalProps = {
@@ -9,6 +10,8 @@ type ModalProps = {
 };
 
 export default function Modal({ children }: ModalProps) {
+  const { setId } = useModal();
+
   const [mount, setMount] = useState(false);
 
   useEffect(() => {
@@ -23,9 +26,8 @@ export default function Modal({ children }: ModalProps) {
             <div className="self-end">
               <Button
                 text="Close"
-                href="/projects"
+                onClick={() => setId(null)}
                 color="black"
-                scroll={false}
               />
             </div>
           </div>

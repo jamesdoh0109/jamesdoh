@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
-import { PRIVATE_ROUTES } from "@/lib/constants";
 import VerticalSeparator from "@/components/Navbar/VerticalSeparator";
 import ToggleDarkMode from "@/components/Navbar/ToggleDarkMode";
 import ImageContainer from "@/components/common/ImageContainer";
@@ -19,30 +18,13 @@ const MENU = [
 ];
 
 export default function Navbar() {
-  const router = useRouter();
-
   const pathname = usePathname();
-  const isPrivateRoute =
-    PRIVATE_ROUTES.includes(pathname) ||
-    /^\/admin\/projects\/edit\/[^/]+$/.test(pathname);
-
-  const logoHfef = isPrivateRoute ? "/admin" : "/";
 
   const [menuExpand, setMenuExpand] = useState(false);
 
-  async function logout() {
-    const res = await fetch("/api/auth/logout", {
-      method: "POST",
-    });
-
-    if (res.status === 200) {
-      router.push("/admin/login");
-    }
-  }
-
   return (
     <div className="w-full h-16 flex justify-between items-center px-4 fixed top-0 bg-grey-3 dark:bg-grey-0 z-30">
-      <Link href={logoHfef}>
+      <Link href="/">
         <ImageContainer
           src={logoDark}
           alt="logo"
@@ -66,22 +48,16 @@ export default function Navbar() {
             menuExpand ? "flex" : "tablet:flex hidden"
           }`}
         >
-          {!isPrivateRoute ? (
-            MENU.map((menuItem) => (
-              <li
-                key={menuItem.id}
-                className={`${
-                  pathname === "/" + menuItem.name.toLowerCase() && "underline"
-                } hover:underline`}
-              >
-                <Link href={menuItem.href}>{menuItem.name}</Link>
-              </li>
-            ))
-          ) : (
-            <li onClick={logout} className="cursor-pointer">
-              Log out
+          {MENU.map((menuItem) => (
+            <li
+              key={menuItem.id}
+              className={`${
+                pathname === "/" + menuItem.name.toLowerCase() && "underline"
+              } hover:underline`}
+            >
+              <Link href={menuItem.href}>{menuItem.name}</Link>
             </li>
-          )}
+          ))}
         </ul>
       </div>
     </div>

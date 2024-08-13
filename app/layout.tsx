@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import { ModalProvider } from "@/context/ModalProvider";
 import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 
@@ -27,10 +28,12 @@ export default function RootLayout({
       <body className={`${roboto.className} bg-grey-3 dark:bg-grey-0`}>
         <div id="modal"></div>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="h-dvh">
-            <Navbar />
-            <div className="h-full">{children}</div>
-          </div>
+          <ModalProvider>
+            <div className="h-dvh">
+              <Navbar />
+              <div className="h-full">{children}</div>
+            </div>
+          </ModalProvider>
         </ThemeProvider>
       </body>
     </html>

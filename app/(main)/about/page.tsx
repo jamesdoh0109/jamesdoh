@@ -13,7 +13,7 @@ export default function About() {
         <ImageContainer
           src={profile2}
           alt="profile-2"
-          className="h-1/2 hide-desktop-image:w-[250px] hide-desktop-image:h-[250px]"
+          className="h-[400px] w-[400px] flex justify-center hide-desktop-image:w-[320px] hide-desktop-image:h-[320px]"
         />
         <div className="flex space-x-5">
           <a href="https://github.com/jihundoh0109" target="_blank">

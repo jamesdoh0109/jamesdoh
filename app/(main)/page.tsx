@@ -4,6 +4,7 @@ import LinkedIn from "@/components/svg/LinkedIn";
 import Mail from "@/components/svg/Mail";
 import X from "@/components/svg/X";
 import profile1 from "@/public/profile_1.png";
+import badge1 from "@/public/aws_badge_1.png";
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
         solutions that ultimately&nbsp;
         <span className="font-bold">empower</span> the world in which we live.
       </p>
-      <div className="flex space-x-5 hide-desktop-image:pb-12">
+      <div className="flex space-x-5">
         <a href="https://github.com/jihundoh0109" target="_blank">
           <Github className="w-6 h-6 fill-black dark:fill-white" />
         </a>
@@ -48,6 +49,13 @@ export default function Home() {
           <Mail className="w-6 h-6 fill-black dark:fill-white" />
         </a>
       </div>
+      <a
+        className="hide-desktop-image:pb-12"
+        href="https://www.credly.com/badges/60b49f9b-95ec-4350-b9ed-215299cb44a0/public_url"
+        target="_blank"
+      >
+        <ImageContainer src={badge1} alt="badge-1" className="h-[110px]" />
+      </a>
     </div>
   );
 }

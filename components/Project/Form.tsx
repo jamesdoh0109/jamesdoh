@@ -5,12 +5,18 @@ import { useForm } from "react-hook-form";
 import { Project, ProjectForm } from "@/lib/types";
 import { ProjectFormSchema } from "@/lib/validations";
 import Button from "@/components/common/Button";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 type FormProps = {
   project?: Project;
 };
 
 export default function Form({ project }: FormProps) {
+  const [serverError, setServerError] = useState<string | null>(null);
+
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -19,7 +25,36 @@ export default function Form({ project }: FormProps) {
     resolver: zodResolver(ProjectFormSchema),
   });
 
-  function createOrEditProject() {}
+  async function createOrEditProject(data: ProjectForm) {
+    setServerError(null);
+
+    const formData = new FormData();
+
+    for (const key in data) {
+      if (key === "image") {
+        const fileList = data[key as keyof ProjectForm] as FileList;
+        formData.append(key, fileList[0]);
+      } else {
+        formData.append(key, data[key as keyof ProjectForm] as string);
+      }
+    }
+
+    try {
+      const res = await fetch("/api/projects", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.status === 201) {
+        //router.push("/admin/projects");
+      } else {
+        const error = await res.json();
+        setServerError(error.message);
+      }
+    } catch (err) {
+      setServerError("An unexpected error occurred.");
+    }
+  }
 
   return (
     <div>
@@ -29,10 +64,11 @@ export default function Form({ project }: FormProps) {
       >
         <input {...register("name")} />
         {clientError.name && <p role="alert">{clientError.name.message}</p>}
-        <input {...register("startDate")} />
+        <input {...register("startDate")} type="month" />
         {clientError.startDate && (
           <p role="alert">{clientError.startDate.message}</p>
         )}
+        <input {...register("endDate")} type="month" />
         {clientError.endDate && (
           <p role="alert">{clientError.endDate.message}</p>
         )}
@@ -44,7 +80,11 @@ export default function Form({ project }: FormProps) {
         {clientError.projectLink && (
           <p role="alert">{clientError.projectLink.message}</p>
         )}
-        <input {...register("image")} type="file" />
+        <input {...register("githubLink")} />
+        {clientError.githubLink && (
+          <p role="alert">{clientError.githubLink.message}</p>
+        )}
+        <input {...register("image")} type="file" accept="image/*" />
         {clientError.image && <p role="alert">{clientError.image.message}</p>}
         <Button text={`${project ? "Edit" : "Create"}`} color="toggle" />
       </form>

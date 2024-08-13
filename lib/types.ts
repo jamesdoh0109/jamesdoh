@@ -1,4 +1,4 @@
-export type Signup = {
+export type Login = {
   email: string;
   password: string;
 };
@@ -23,12 +23,13 @@ export type Projects = {
 };
 
 export type ProjectForm = {
+  name: string;
   startDate: string;
   endDate: string;
-  name: string;
-  image: string;
-  projectLink: string;
   description: string;
+  image: FileList;
+  projectLink: string;
+  githubLink: string;
 };
 
 export type ButtonColor = "black" | "white" | "toggle";

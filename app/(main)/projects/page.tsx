@@ -13,7 +13,7 @@ export default async function Projects({ searchParams }: ProjectsProps) {
   const { showModal, id } = searchParams || {};
 
   const projects: Record<string, Project> = await getProjects();
-
+  
   const sortedProjects = Object.entries(projects).sort(sortByEndDate);
 
   const modal = () => {

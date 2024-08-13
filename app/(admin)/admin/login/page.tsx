@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SignupFormSchema } from "@/lib/validations";
-import { Signup } from "@/lib/types";
+import { Login } from "@/lib/types";
 
 export default function Admin() {
-  const [serverError, setServerError] = useState(null);
+  const [serverError, setServerError] = useState<string | null>(null);
 
   const router = useRouter();
 
@@ -16,25 +16,32 @@ export default function Admin() {
     register,
     handleSubmit,
     formState: { errors: clientError },
-  } = useForm<Signup>({
+  } = useForm<Login>({
     resolver: zodResolver(SignupFormSchema),
   });
 
-  const login: SubmitHandler<Signup> = async (data) => {
+  async function login(data: Login) {
     setServerError(null);
-    
-    const res = await fetch("/api/auth/login", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
 
-    if (res.status === 200) {
-      router.push("/admin");
-    } else {
-      const error = await res.json();
-      setServerError(error.message);
+    try {
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (res.status === 200) {
+        router.push("/admin");
+      } else {
+        const error = await res.json();
+        setServerError(error.message);
+      }
+    } catch (err) {
+      setServerError("An unexpected error occurred.");
     }
-  };
+  }
 
   return (
     <div className="h-full flex flex-col justify-center items-center">

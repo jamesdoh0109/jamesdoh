@@ -8,7 +8,7 @@ export default function Introduction() {
       </h2>
       <div className="space-y-2">
         <p>
-          I&apos;m James Doh, and I&apos;m a rising junior at the&nbsp;
+          I&apos;m James Doh, and I&apos;m a junior at the&nbsp;
           <Anchor
             href="https://www.upenn.edu"
             text="University of Pennsylvania"
@@ -20,7 +20,7 @@ export default function Introduction() {
           These past couple years have been quite a journey for me—I decided to
           take a leave of absence from school, and completed the mandatory
           military service in South Korea. 🇰🇷 🪖 Before returning back to Penn
-          this fall, I&apos;m interning at&nbsp;
+          this fall, I interned at&nbsp;
           <Anchor href="https://www.soundable.health" text="Soundable Health" />
           &nbsp;at its Seoul office, helping build some cool products that
           analyze everyday physiological sounds using AI and provide patients
@@ -52,8 +52,8 @@ export default function Introduction() {
         </div>
         <div>
           <p>
-            Apart from building software, I&apos;ve also been a big part of the
-            teaching community at Penn:
+            Apart from building software, I was also a big part of the teaching
+            community at Penn:
           </p>
           <ul className="list-disc pl-8">
             <li>
@@ -80,7 +80,7 @@ export default function Introduction() {
           </ul>
         </div>
         <p>
-          When I&apos;m not in front of my computer, you can probably find me
+          If I&apos;m not in front of my computer, you can probably find me
           listening to music 🎧 &#40;
           <Anchor
             href="https://www.youtube.com/watch?v=pTg3gFYqjBY"

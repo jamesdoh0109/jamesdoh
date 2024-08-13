@@ -29,8 +29,8 @@ export function formatDateRange(startDate: string, endDate: string) {
   ];
 
   function formatDate(dateStr: string) {
-    const monthIndex = parseInt(dateStr.slice(0, 2), 10) - 1; // convert MM to month index (0-based)
-    const year = dateStr.slice(2); // extract YYYY
+    const [year, month] = dateStr.split("-");
+    const monthIndex = parseInt(month, 10) - 1;
     return `${monthNames[monthIndex]} ${year}`;
   }
 
@@ -46,8 +46,7 @@ export function formatDateRange(startDate: string, endDate: string) {
 }
 
 function convertEndDateStringToTime(endDate: string) {
-  const month = parseInt(endDate.slice(0, 2), 10);
-  const year = parseInt(endDate.slice(2), 10);
+  const [year, month] = endDate.split("-").map((part) => parseInt(part, 10));
   return new Date(year, month - 1);
 }
 

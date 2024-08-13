@@ -30,7 +30,11 @@ export default function Dashboard({
         {projects.map(([projectId, project]) => (
           <Card
             key={projectId}
-            href={`/projects/?showModal=true&id=${projectId}`}
+            href={`${
+              isAdminView
+                ? `/admin/projects/${projectId}`
+                : `/projects/?showModal=true&id=${projectId}`
+            }`}
           >
             <Summary
               name={project.name}

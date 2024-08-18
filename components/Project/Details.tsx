@@ -38,7 +38,15 @@ export default function Details({
         <div className="flex items-center space-x-2">
           <Globe className="w-4 h-4" />
           {isValidHttpUrl(projectLink) ? (
-            <Anchor href={projectLink} text="Link to project" color="blue" />
+            <Anchor
+              href={projectLink}
+              text={`${
+                name.includes("JP Morgan")
+                  ? "Link to certificate"
+                  : "Link to project"
+              }`}
+              color="blue"
+            />
           ) : (
             <span>Link unavailable - {projectLink}</span>
           )}

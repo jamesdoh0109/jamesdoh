@@ -45,18 +45,3 @@ export function formatDateRange(startDate: string, endDate: string) {
   }
 }
 
-export function sortByEndDate(
-  projects: Record<string, Project>
-): Record<string, Project> {
-  const projectEntries = Object.entries(projects);
-
-  projectEntries.sort(([, a], [, b]) => {
-    const dateA = new Date(a.endDate).getTime();
-    const dateB = new Date(b.endDate).getTime();
-    return dateB - dateA;
-  });
-
-  const sortedProjects = Object.fromEntries(projectEntries);
-
-  return sortedProjects;
-}

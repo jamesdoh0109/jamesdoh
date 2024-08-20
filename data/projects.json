@@ -2,7 +2,7 @@
   "jpmorgan": {
     "description": "I recently participated in JPMorgan Chase’s virtual job simulation, where I used JPMorgan’s own open source library called Perspective, to build a live graph that displays a data feed for traders to monitor.",
     "endDate": "2024-08",
-    "githubLink": "https://github.com/jihundoh0109/forage-jpmc-swe-task-3",
+    "githubLink": "https://github.com/jamesdoh0109/forage-jpmc-swe-task-3",
     "imageLink": "/jp-morgan.png",
     "name": "JP Morgan Chase Software Engineering Virtual Experience",
     "projectLink": "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_J.P.%20Morgan_iyZCc26FMhhsrhqnE_1724010026496_completion_certificate.pdf",
@@ -29,7 +29,7 @@
   "pennFreeFoodExchange": {
     "description": "Do you have any leftover food? Instead of throwing it away, share it on Penn Free Food Exchange! Originally an idea from my friend Ethan Markwalter, PFFE allows users to simply drop a pin on the map and share the free food details (NOTE: must have a Penn email to join).",
     "endDate": "2024-02",
-    "githubLink": "https://github.com/jihundoh0109/penn-free-food-exchange",
+    "githubLink": "https://github.com/jamesdoh0109/penn-free-food-exchange",
     "imageLink": "/penn-free-food-exchange.png",
     "name": "Penn Free Food Exchange",
     "projectLink": "https://penn-free-food-exchange.vercel.app",
@@ -38,7 +38,7 @@
   "stringSearchVisualizer": {
     "description": "For my first project of 2024, I created a website that helps visualize various string search algorithms, from the näive, brute-force approach to Knuth-Morris-Pratt (KMP) and Rabin-Karp algorithms. Simply enter the text and the pattern to search for within the text, and then press \"Visualize\"!",
     "endDate": "2024-01",
-    "githubLink": "https://github.com/jihundoh0109/string-search-visualizer",
+    "githubLink": "https://github.com/jamesdoh0109/string-search-visualizer",
     "imageLink": "/string-search-visualizer.png",
     "name": "String Search Visualizer",
     "projectLink": "https://www.string-search-visualizer.com",
@@ -47,7 +47,7 @@
   "jdtodo": {
     "description": "JDTodo is more than a simple todo list application. Built with React.js frontend and Flask backend, It allows you to create multiple projects (i.e. CIS-1210 Exam Study Plan, Spring Break Travel), and for each project, you can create its own todo-list! You can also create your account where all your information will be saved.",
     "endDate": "2023-09",
-    "githubLink": "https://github.com/jihundoh0109/jdtodo",
+    "githubLink": "https://github.com/jamesdoh0109/jdtodo",
     "imageLink": "/jdtodo.png",
     "name": "JDTodo",
     "projectLink": "personal project; not deployed",

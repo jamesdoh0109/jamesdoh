@@ -36,10 +36,10 @@ export default function Home() {
         <span className="font-bold">empower</span> the world in which we live.
       </p>
       <div className="flex space-x-5">
-        <a href="https://github.com/jihundoh0109" target="_blank">
+        <a href="https://github.com/jamesdoh0109" target="_blank">
           <Github className="w-6 h-6 fill-black dark:fill-white" />
         </a>
-        <a href="https://www.linkedin.com/in/jihun-doh" target="_blank">
+        <a href="https://www.linkedin.com/in/james-doh" target="_blank">
           <LinkedIn className="w-6 h-6 fill-black dark:fill-white" />
         </a>
         <a href="https://twitter.com/james___doh" target="_blank">

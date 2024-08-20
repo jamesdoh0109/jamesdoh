@@ -17,14 +17,13 @@ export default function Introduction() {
           Intelligence. 🤖
         </p>
         <p>
-          These past couple years have been quite a journey for me—I decided to
-          take a leave of absence from school, and completed the mandatory
-          military service in South Korea. 🇰🇷 🪖 Before returning back to Penn
-          this fall, I interned at&nbsp;
+          One of the coolest experiences this year was definitely interning at&nbsp;
           <Anchor href="https://www.soundable.health" text="Soundable Health" />
-          &nbsp;at its Seoul office, helping build some cool products that
+          , a digital healthcare startup that builds some cool products that
           analyze everyday physiological sounds using AI and provide patients
-          with effective health-monitoring solutions.
+          with effective health-monitoring solutions. I worked at its
+          office in Seoul, making some cool projects with a team of awesome
+          developrs, PhD&apos;s, and designers!
         </p>
         <div>
           <p>

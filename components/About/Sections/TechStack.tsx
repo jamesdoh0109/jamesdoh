@@ -20,6 +20,12 @@ import SkillBar from "../SkillBar";
 
 const LANGUAGES = [
   {
+    key: "python",
+    name: "Python",
+    component: <Python className="w-6 h-6 fill-black dark:fill-white" />,
+    skill: "w-[75%]",
+  },
+  {
     key: "javascript",
     name: "JavaScript",
     component: <JavaScript className="w-6 h-6 fill-black dark:fill-white" />,
@@ -32,6 +38,12 @@ const LANGUAGES = [
     skill: "w-[70%]",
   },
   {
+    key: "C/C++",
+    name: "TypeScript",
+    component: <TypeScript className="w-6 h-6 fill-black dark:fill-white" />,
+    skill: "w-[40%]",
+  },
+  {
     key: "html",
     name: "HTML",
     component: <HTML className="w-6 h-6 fill-black dark:fill-white" />,
@@ -42,12 +54,6 @@ const LANGUAGES = [
     name: "CSS",
     component: <CSS className="w-6 h-6 fill-black dark:fill-white" />,
     skill: "w-[78%]",
-  },
-  {
-    key: "python",
-    name: "Python",
-    component: <Python className="w-6 h-6 fill-black dark:fill-white" />,
-    skill: "w-[70%]",
   },
   {
     key: "java",

@@ -17,6 +17,7 @@ import Redux from "@/components/svg/Redux";
 import Tailwind from "@/components/svg/Tailwind";
 import TypeScript from "@/components/svg/TypeScript";
 import SkillBar from "../SkillBar";
+import CPP from "@/components/svg/CPP";
 
 const LANGUAGES = [
   {
@@ -38,9 +39,9 @@ const LANGUAGES = [
     skill: "w-[70%]",
   },
   {
-    key: "C/C++",
-    name: "TypeScript",
-    component: <TypeScript className="w-6 h-6 fill-black dark:fill-white" />,
+    key: "c++",
+    name: "C++",
+    component: <CPP className="w-6 h-6 fill-black dark:fill-white" />,
     skill: "w-[40%]",
   },
   {
@@ -160,7 +161,7 @@ export default function TechStack() {
 
   return (
     <div className="space-y-4 font-medium text-lg">
-      <h2 className="text-2xl font-medium">Check out my tech stack! 💻</h2> 
+      <h2 className="text-2xl font-medium">Check out my tech stack! 💻</h2>
       <div className="space-y-3">
         <h3>Languages</h3>
         <div className="grid grid-cols-2 gap-3 w-full">

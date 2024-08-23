@@ -1,4 +1,13 @@
 {
+  "webServer": {
+    "description": "As someone who has always been interested in web development, I really wanted to get deeper into the low-level aspects of web development, so I decided to implement a HTTP web server from scratch! I collaborated with a teammate to build a high-performance web server that can handle multiple simultaneous request and dynamic paths, and also serve various assets like HTML, CSS, and JS.",
+    "endDate": "2024-08",
+    "githubLink": "https://github.com/jamesdoh0109/http-server",
+    "imageLink": "/web-server.png",
+    "name": "C++ HTTP Server",
+    "projectLink": "not deployed",
+    "startDate": "2024-08"
+  },
   "jpmorgan": {
     "description": "I recently participated in JPMorgan Chase’s virtual job simulation, where I used JPMorgan’s own open source library called Perspective, to build a live graph that displays a data feed for traders to monitor.",
     "endDate": "2024-08",

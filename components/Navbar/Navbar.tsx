@@ -14,7 +14,7 @@ const MENU = [
   { id: 0, name: "About", href: "/about" },
   { id: 1, name: "Projects", href: "/projects" },
   { id: 2, name: "Blog", href: "/blog" },
-  { id: 3, name: "Resumé", href: "/resumé.pdf" },
+  { id: 3, name: "Resumé", href: "/resume.pdf" },
 ];
 
 export default function Navbar() {

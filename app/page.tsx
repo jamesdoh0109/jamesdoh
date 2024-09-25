@@ -4,7 +4,7 @@ import LinkedIn from "@/components/svg/LinkedIn";
 import Mail from "@/components/svg/Mail";
 import X from "@/components/svg/X";
 import profile1 from "@/public/profile_1.png";
-import badge1 from "@/public/aws_badge_1.png";
+import badge1 from "@/public/aws_badge.png";
 
 export default function Home() {
   return (
@@ -50,7 +50,7 @@ export default function Home() {
         </a>
       </div>
       <a
-        className="hide-desktop-image:pb-12  w-[110px]"
+        className="hide-desktop-image:pb-12 w-[110px]"
         href="https://www.credly.com/badges/60b49f9b-95ec-4350-b9ed-215299cb44a0/public_url"
         target="_blank"
       >

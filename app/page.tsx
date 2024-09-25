@@ -50,7 +50,7 @@ export default function Home() {
         </a>
       </div>
       <a
-        className="hide-desktop-image:pb-12"
+        className="hide-desktop-image:pb-12  w-[110px]"
         href="https://www.credly.com/badges/60b49f9b-95ec-4350-b9ed-215299cb44a0/public_url"
         target="_blank"
       >

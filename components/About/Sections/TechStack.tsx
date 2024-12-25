@@ -8,7 +8,6 @@ import MongoDB from "@/components/svg/MongoDB";
 import MySQL from "@/components/svg/MySQL";
 import Next from "@/components/svg/Next";
 import OCaml from "@/components/svg/OCaml";
-import Prisma from "@/components/svg/Prisma";
 import Python from "@/components/svg/Python";
 import React from "@/components/svg/React";
 import ReactHookForm from "@/components/svg/ReactHookForm";
@@ -18,6 +17,8 @@ import Tailwind from "@/components/svg/Tailwind";
 import TypeScript from "@/components/svg/TypeScript";
 import SkillBar from "../SkillBar";
 import CPP from "@/components/svg/CPP";
+import PostgreSQL from "@/components/svg/PostgreSQL";
+import Neo4J from "@/components/svg/Neo4J";
 
 const LANGUAGES = [
   {
@@ -42,7 +43,7 @@ const LANGUAGES = [
     key: "c++",
     name: "C++",
     component: <CPP className="w-6 h-6 fill-black dark:fill-white" />,
-    skill: "w-[40%]",
+    skill: "w-[55%]",
   },
   {
     key: "html",
@@ -123,22 +124,28 @@ const FRAMEWORKS_AND_LIBRARIES = [
 
 const DATABASE = [
   {
+    key: "postgresql",
+    name: "PostgreSQL",
+    component: <PostgreSQL className="w-6 h-6 fill-black dark:fill-white" />,
+    skill: "w-[80%]",
+  },
+  {
     key: "mysql",
     name: "MySQL",
     component: <MySQL className="w-6 h-6 fill-black dark:fill-white" />,
-    skill: "w-[40%]",
+    skill: "w-[60%]",
   },
   {
     key: "mongodb",
     name: "MongoDB",
     component: <MongoDB className="w-6 h-6 fill-black dark:fill-white" />,
-    skill: "w-[40%]",
+    skill: "w-[55%]",
   },
   {
-    key: "prisma",
-    name: "Prisma",
-    component: <Prisma className="w-6 h-6 fill-black dark:fill-white" />,
-    skill: "w-[20%]",
+    key: "neo4j",
+    name: "Neo4J",
+    component: <Neo4J className="w-6 h-6 fill-black dark:fill-white" />,
+    skill: "w-[40%]",
   },
 ];
 
@@ -161,7 +168,9 @@ export default function TechStack() {
 
   return (
     <div className="space-y-4 font-medium text-lg">
-      <h2 className="text-2xl font-medium">Check out my tech stack! 💻</h2>
+      <h2 className="text-2xl font-medium">
+        Check out some of my tech stack! 💻
+      </h2>
       <div className="space-y-3">
         <h3>Languages</h3>
         <div className="grid grid-cols-2 gap-3 w-full">

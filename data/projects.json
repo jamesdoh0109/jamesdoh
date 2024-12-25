@@ -1,4 +1,13 @@
 {
+  "mediaPedia": {
+    "description": "For our final project for CIS-5500 (Database and Information Systems), my team created a full-stack web application that allows users to browse and explore various movie data. We created a PostgreSQL database deployed on AWS RDS, hosting over 500,000 rows of data related to movies, genres, ratings, actors, and directors (these data were gathered and cleaned from a public IMDB database).",
+    "endDate": "2024-12",
+    "githubLink": "private repository",
+    "imageLink": "/media-pedia.png",
+    "name": "Media Pedia",
+    "projectLink": "not deployed",
+    "startDate": "2024-08"
+  },
   "webServer": {
     "description": "As someone who has always been interested in web development, I really wanted to get deeper into the low-level aspects of web development, so I decided to implement a HTTP web server from scratch! I collaborated with a teammate to build a high-performance web server that can handle multiple simultaneous request and dynamic paths, and also serve various assets like HTML, CSS, and JS.",
     "endDate": "2024-08",

@@ -17,13 +17,14 @@ export default function Introduction() {
           Intelligence. 🤖
         </p>
         <p>
-          One of the coolest experiences this year was definitely interning at&nbsp;
+          I previously interned at&nbsp;
           <Anchor href="https://www.soundable.health" text="Soundable Health" />
-          , a digital healthcare startup that builds some cool products that
-          analyze everyday physiological sounds using AI and provide patients
-          with effective health-monitoring solutions. I worked at its
-          office in Seoul, making some cool projects with a team of awesome
-          developrs, PhD&apos;s, and designers!
+          , a digital healthcare startup based in Seoul that analyzes
+          everyday physiological sounds using AI and provides patients with
+          effective health-monitoring solutions. Next summer, I will be
+          interning at&nbsp;
+          <Anchor href="https://www.rilla.com/" text="Rilla" />, a startup that 
+          builds AI speech analytics software for home improvement and services industry! 
         </p>
         <div>
           <p>
@@ -51,26 +52,34 @@ export default function Introduction() {
         </div>
         <div>
           <p>
-            Apart from building software, I was also a big part of the teaching
-            community at Penn:
+            Apart from building software, I&apos;ve also been a big part of the
+            teaching community at Penn:
           </p>
           <ul className="list-disc pl-8">
             <li>
-              Teaching Assistant @&nbsp;
+              Teaching Assistant for&nbsp;
+              <Anchor
+                href="https://www.cis.upenn.edu/~cis3200/current"
+                text="CIS-3200"
+              />
+              &nbsp;&#40;Starting Spring 2025&#41;
+            </li>
+            <li>
+              Teaching Assistant for&nbsp;
               <Anchor
                 href="https://www.cis.upenn.edu/~cis110/current"
                 text="CIS-1100"
               />
             </li>
             <li>
-              Teaching Assistant @&nbsp;
+              Teaching Assistant for&nbsp;
               <Anchor
                 href="https://www.cis.upenn.edu/~cis1210/current/index.html"
                 text="CIS-1210"
               />
             </li>
             <li>
-              Programming TA @&nbsp;
+              Programming TA for&nbsp;
               <Anchor
                 href="https://pennfirstplus.upenn.edu/pre-freshman-program"
                 text="Pre-Freshman Program"
@@ -82,7 +91,7 @@ export default function Introduction() {
           If I&apos;m not in front of my computer, you can probably find me
           listening to music 🎧 &#40;
           <Anchor
-            href="https://www.youtube.com/watch?v=pTg3gFYqjBY"
+            href="https://www.youtube.com/watch?v=6ZfuoPN_xeE"
             text="mostly rap + r&b"
           />
           &#41;, working out 🏋️, or hanging out with my friends. 👥
